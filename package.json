@@ -4,10 +4,10 @@
   "description": "CSS grid constructor, written in less",
   "main": "src/grid-constructor.less",
   "scripts": {
-    "pretest": "npm run build",
-    "test": "csslint dist/grid-constructor.css",
-    "build": "lessc src/grid-constructor.less build/grid-constructor.css",
-    "dist": "lessc --clean-css src/grid-constructor.less dist/grid-constructor.min.css"
+    "pretest": "npm run dist",
+    "test": "csslint dist/grid.css",
+    "build": "lessc test/grid.less build/grid.css",
+    "dist": "lessc --clean-css test/grid.less dist/grid.min.css"
   },
   "repository": {
     "type": "git",
