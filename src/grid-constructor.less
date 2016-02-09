@@ -8,41 +8,55 @@
   .grid-constructor-xl(@n, @selector, @padding, xl);
 }
 
+.breakpoint-xs() {
+  .@{selector}-@{suffix}-@{i} {
+    @media (screen) {
+      padding: 0 @padding;
+      width: (@i * 100% / @n);
+    }
+  }
+}
+
 .breakpoint-sm() {
-  @media (min-width: 34em) {
-    padding: 0 @padding;
-    width: (@i * 100% / @n);
+  .@{selector}-@{suffix}-@{i} {
+    @media (min-width: 34em) {
+      padding: 0 @padding;
+      width: (@i * 100% / @n);
+    }
   }
 }
 
 .breakpoint-md() {
-  @media (min-width: 48em) {
-    padding: 0 @padding;
-    width: (@i * 100% / @n);
+  .@{selector}-@{suffix}-@{i} {
+    @media (min-width: 48em) {
+      padding: 0 @padding;
+      width: (@i * 100% / @n);
+    }
   }
 }
 
 .breakpoint-lg() {
-  @media (min-width: 62em) {
-    padding: 0 @padding;
-    width: (@i * 100% / @n);
+  .@{selector}-@{suffix}-@{i} {
+    @media (min-width: 62em) {
+      padding: 0 @padding;
+      width: (@i * 100% / @n);
+    }
   }
 }
 
 .breakpoint-xl() {
-  @media (min-width: 75em) {
-    padding: 0 @padding;
-    width: (@i * 100% / @n);
+  .@{selector}-@{suffix}-@{i} {
+    @media (min-width: 75em) {
+      padding: 0 @padding;
+      width: (@i * 100% / @n);
+    }
   }
 }
 
 .grid-constructor-xs(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
 
   // Extra small devices (portrait phones, less than 34em)
-  .@{selector}-@{suffix}-@{i} {
-    padding: 0 @padding;
-    width: (@i * 100% / @n);
-  }
+  .breakpoint-xs();
 
   .grid-constructor-xs(@n, @selector, @padding, @suffix, (@i + 1));
 }

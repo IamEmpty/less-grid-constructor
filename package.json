@@ -6,8 +6,10 @@
   "scripts": {
     "pretest": "npm run dist",
     "test": "csslint dist/grid.css",
-    "build": "lessc test/grid.less build/grid.css",
-    "dist": "lessc --clean-css test/grid.less dist/grid.min.css"
+    "lint": "lessc --lint test/grid.less",
+    "build": "lessc --no-ie-compat test/grid.less build/grid.css",
+    "dist": "lessc --clean-css --no-ie-compat test/grid.less dist/grid.min.css",
+    "clean": "rm -rf dist/ && rm -rf build/"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/IamEmpty/less-grid-constructor#readme",
   "devDependencies": {
     "less": "^2.6.0",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "watch": "^0.17.1"
   }
 }
