@@ -1,0 +1,29 @@
+{
+  "name": "less-grid-constructor",
+  "version": "1.0.0",
+  "description": "CSS grid constructor, written in less",
+  "main": "src/grid-constructor.less",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "csslint dist/grid-constructor.css",
+    "build": "lessc src/grid-constructor.less build/grid-constructor.css",
+    "dist": "lessc --clean-css src/grid-constructor.less dist/grid-constructor.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamEmpty/less-grid-constructor.git"
+  },
+  "keywords": [
+    "less"
+  ],
+  "author": "IamEmpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IamEmpty/less-grid-constructor/issues"
+  },
+  "homepage": "https://github.com/IamEmpty/less-grid-constructor#readme",
+  "devDependencies": {
+    "less": "^2.6.0",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}

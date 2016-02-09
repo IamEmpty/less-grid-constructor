@@ -1,0 +1,80 @@
+// Grid column constructor
+.grid-constructor(@n, @selector, @padding: 0) {
+
+  .grid-constructor-xs(@n, @selector, @padding, xs);
+  .grid-constructor-sm(@n, @selector, @padding, sm);
+  .grid-constructor-md(@n, @selector, @padding, md);
+  .grid-constructor-lg(@n, @selector, @padding, lg);
+  .grid-constructor-xl(@n, @selector, @padding, xl);
+}
+
+.breakpoint-sm() {
+  @media (min-width: 34em) {
+    padding: 0 @padding;
+    width: (@i * 100% / @n);
+  }
+}
+
+.breakpoint-md() {
+  @media (min-width: 48em) {
+    padding: 0 @padding;
+    width: (@i * 100% / @n);
+  }
+}
+
+.breakpoint-lg() {
+  @media (min-width: 62em) {
+    padding: 0 @padding;
+    width: (@i * 100% / @n);
+  }
+}
+
+.breakpoint-xl() {
+  @media (min-width: 75em) {
+    padding: 0 @padding;
+    width: (@i * 100% / @n);
+  }
+}
+
+.grid-constructor-xs(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
+
+  // Extra small devices (portrait phones, less than 34em)
+  .@{selector}-@{suffix}-@{i} {
+    padding: 0 @padding;
+    width: (@i * 100% / @n);
+  }
+
+  .grid-constructor-xs(@n, @selector, @padding, @suffix, (@i + 1));
+}
+
+.grid-constructor-sm(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
+
+  // Small devices (landscape phones, 34em and up)
+  .breakpoint-sm;
+
+  .grid-constructor-sm(@n, @selector, @padding, @suffix, (@i + 1));
+}
+
+.grid-constructor-md(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
+
+  // Medium devices (tablets, 48em and up)
+  .breakpoint-md;
+
+  .grid-constructor-md(@n, @selector, @padding, @suffix, (@i + 1));
+}
+
+.grid-constructor-lg(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
+
+  // Large devices (desktops, 62em and up)
+  .breakpoint-lg;
+
+  .grid-constructor-lg(@n, @selector, @padding, @suffix, (@i + 1));
+}
+
+.grid-constructor-xl(@n, @selector, @padding, @suffix, @i: 1) when (@i =< @n) {
+
+  // Extra large devices (large desktops, 75em and up)
+  .breakpoint-xl;
+
+  .grid-constructor-xl(@n, @selector, @padding, @suffix, (@i + 1));
+}
