@@ -8,6 +8,7 @@
     "test": "csslint dist/grid.css",
     "lint": "lessc --lint test/grid.less",
     "build": "lessc --no-ie-compat test/grid.less build/grid.css",
+    "build:watch": "watch 'npm run build' . -d",
     "dist": "lessc --clean-css --no-ie-compat test/grid.less dist/grid.min.css",
     "clean": "rm -rf dist/ && rm -rf build/"
   },
