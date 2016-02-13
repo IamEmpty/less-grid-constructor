@@ -1,6 +1,7 @@
 // Grid column constructor
 .grid-constructor(@n, @selector, @padding: 0) {
 
+  // Two lists with breakpoints
   @import 'breakpoints';
 
   .grid-overloop(@suffix, @breakpoint) {
@@ -21,15 +22,15 @@
   }
 
 
-  .grid-gdd(@n, @suffixes: @suffixes, @breakpoints: @breakpoints, @i: 1) when (@i =< @n) {
+  .grid-gdd(@n, @i: 1) when (@i =< @n) {
 
     @suffix: extract(@suffixes, @i);
     @breakpoint: extract(@breakpoints, @i);
 
     .grid-overloop(@suffix, @breakpoint);
 
-    .grid-gdd(@n, @suffixes, @breakpoints, (@i + 1));
+    .grid-gdd(@n, (@i + 1));
   }
 
-  .grid-gdd(5);
+  .grid-gdd(length(@suffixes));
 }
