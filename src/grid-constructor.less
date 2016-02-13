@@ -1,21 +1,7 @@
 // Grid column constructor
 .grid-constructor(@n, @selector, @padding: 0) {
 
-  // Extra small devices (portrait phones, less than 34em)
-  @break-xs: 1px;
-  // Small devices (landscape phones, 34em and up)
-  @break-sm: 34em;
-  // Medium devices (tablets, 48em and up)
-  @break-md: 48em;
-  // Large devices (desktops, 62em and up)
-  @break-lg: 62em;
-  // Extra large devices (large desktops, 75em and up)
-  @break-xl: 75em;
-
-  // List of breakpoints
-  @breakpoints: @break-xs, @break-sm, @break-md, @break-lg, @break-xl;
-  // List of suffixes
-  @suffixes: xs, sm, md, lg, xl;
+  @import 'breakpoints';
 
   .grid-overloop(@suffix, @breakpoint) {
 
@@ -35,7 +21,7 @@
   }
 
 
-  .grid-gdd(@n, @suffixes, @breakpoints, @i: 1) when (@i =< @n) {
+  .grid-gdd(@n, @suffixes: @suffixes, @breakpoints: @breakpoints, @i: 1) when (@i =< @n) {
 
     @suffix: extract(@suffixes, @i);
     @breakpoint: extract(@breakpoints, @i);
@@ -45,5 +31,5 @@
     .grid-gdd(@n, @suffixes, @breakpoints, (@i + 1));
   }
 
-  .grid-gdd(5, @suffixes, @breakpoints);
+  .grid-gdd(5);
 }
