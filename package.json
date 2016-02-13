@@ -5,7 +5,8 @@
   "main": "src/grid-constructor.less",
   "scripts": {
     "pretest": "npm run dist",
-    "test": "csslint dist/grid.css",
+    "syntax": "csslint dist/grid.css",
+    "test": "npm run syntax",
     "lint": "lessc --lint test/grid.less",
     "build": "lessc --no-ie-compat test/grid.less build/grid.css",
     "build:watch": "watch 'npm run build' . -d",
