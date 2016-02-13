@@ -1,6 +1,6 @@
 {
   "name": "less-grid-constructor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS grid constructor, written in less",
   "main": "src/grid-constructor.less",
   "scripts": {
