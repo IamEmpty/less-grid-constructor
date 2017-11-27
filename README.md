@@ -1,5 +1,5 @@
 # Less grid constructor
-CSS grid constructor, written in less
+CSS grid constructor, written in less, inspired by Boostrap grid.
 
 ## Usage
 ```less
