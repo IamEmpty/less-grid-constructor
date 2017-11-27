@@ -1,5 +1,5 @@
 # Less grid constructor
-CSS grid constructor, written in less, inspired by Boostrap grid.
+CSS grid constructor, written in less, inspired by Bootstrap grid.
 
 ## Usage
 ```less
@@ -9,8 +9,8 @@ CSS grid constructor, written in less, inspired by Boostrap grid.
 ## Contribution
 ```
 bower install less-grid-constructor
-npm install -g less
-npm install -g less-plugin-clean-css
+npm i
+npm start
 ```
 
 ## Testing
