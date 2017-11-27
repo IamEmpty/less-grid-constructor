@@ -11,7 +11,7 @@
     "build": "lessc --no-ie-compat test/grid.less build/grid.css",
     "start": "watch 'npm run build' . -d",
     "dist": "lessc --clean-css --no-ie-compat test/grid.less dist/grid.min.css",
-    "clean": "rm -rf dist/ && rm -rf build/"
+    "clean": "trash dist/  build/"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {}
+  "dependencies": {
+    "trash-cli": "~1.4.0"
+  }
 }
