@@ -4,13 +4,13 @@
   "description": "CSS grid constructor, written in less",
   "main": "src/grid-constructor.less",
   "authors": [
-    "IamEmpty"
+    "pure-js"
   ],
   "license": "MIT",
   "keywords": [
     "less"
   ],
-  "homepage": "https://github.com/IamEmpty/less-grid-constructor",
+  "homepage": "https://github.com/pure-js/less-grid-constructor",
   "moduleType": [],
   "ignore": [
     "**/.*",

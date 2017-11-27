@@ -15,20 +15,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IamEmpty/less-grid-constructor.git"
+    "url": "git+https://github.com/pure-js/less-grid-constructor.git"
   },
   "keywords": [
     "less"
   ],
-  "author": "IamEmpty",
+  "author": "pure-js",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IamEmpty/less-grid-constructor/issues"
+    "url": "https://github.com/pure-js/less-grid-constructor/issues"
   },
-  "homepage": "https://github.com/IamEmpty/less-grid-constructor#readme",
+  "homepage": "https://github.com/pure-js/less-grid-constructor#readme",
   "devDependencies": {
     "less": "^2.6.0",
     "less-plugin-clean-css": "^1.5.1",
     "watch": "^0.17.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }
